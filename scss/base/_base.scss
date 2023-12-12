@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&family=Inter:wght@400;700;800&family=Poppins:wght@400;700&family=Roboto:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&family=Inconsolata:wght@400;700;800&family=Inter:wght@400;700;800&family=Poppins:wght@400;700&family=Roboto:wght@300;700&display=swap');
+
+
+body {
+    font-family: $font-main;
+    font-size: 16px;
+    color: $font-color;
+    background-color: $body-color;
+}
+
+.container {
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 1260px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
