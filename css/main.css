@@ -251,7 +251,7 @@ body {
   }
 }
 .hero {
-  background: rgba(0, 0, 0, 0.8) url(/img/gif/97RC.gif) center/cover no-repeat;
+  background: rgba(0, 0, 0, 0.8) url(./img/gif/97RC.gif) center/cover no-repeat;
   height: 400px;
   width: 100%;
   position: relative;
@@ -412,6 +412,7 @@ body {
   margin-bottom: 10px;
   font-size: 16px;
 }
+
 .buycar__overlay {
   position: absolute;
   width: 100%;
