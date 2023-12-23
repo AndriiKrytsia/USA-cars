@@ -4,11 +4,231 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MWcars</title>
-    <link rel="stylesheet" href="./scss/_main.scss" />
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <div class="header__logo">MWCars</div>
+          <div class="header__logo-ukrain">
+            <img
+              class="header__logo--ukrain-svg"
+              src="/img/svg/freedom_hand_fist.svg"
+              alt="Ukraine"
+            />
+          </div>
+          <nav class="header__nav">
+            <ul class="header__nav--list">
+              <a class="header__nav--link" href=""
+                ><li class="header__nav--item">Про нас</li></a
+              >
+              <a class="header__nav--link" href=""
+                ><li class="header__nav--item">Аукціони</li></a
+              >
+              <a class="header__nav--link" href=""
+                ><li class="header__nav--item">йцуцйуц</li></a
+              >
+              <a class="header__nav--link" href=""
+                ><li class="header__nav--item">йцуйцуц</li></a
+              >
+            </ul>
+
+            <div class="header__nav--tell">
+              <a class="header__nav--tell-link" href="tel:+380951709950">
+                <img
+                  class="header__nav--tell-img"
+                  src="./img/svg/phone_icon3.svg"
+                  alt="phone"
+                />
+                <div>+380951709950</div>
+              </a>
+            </div>
+          </nav>
+
+          <div class="header__nav--btn">
+            <button class="nav-icon-btn">
+              <div class="nav-icon"></div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <section class="hero">
+          <div class="title-container">
+            <h1 class="hero-title">Авто під ключ із США</h1>
+          </div>
+          <div class="hero__overlay"></div>
+        </section>
+
+        <section class="advantages">
+          <h2 class="advantages__title">Обираючи нас ви отримуєте</h2>
+          <div class="advantages__wrapper">
+            <div class="advantages__card">
+              <img
+                class="advantages__card--img"
+                src="/img/svg/car_icon.svg"
+                alt=""
+              />
+              <p class="advantages__card--description">
+                Допомога та консультація у виборі автомобіля. Підбираємо
+                максимальну кількість найкращих варіантів авто під вибір бюджету
+                і вимог
+              </p>
+            </div>
+            <div class="advantages__card">
+              <img
+                class="advantages__card--img"
+                src="/img/svg/car_mechanic.svg"
+                alt=""
+              />
+              <p class="advantages__card--description">
+                Надамо консультацію Вам в будь-який час. Супровід від покупки
+                авто до постановки на облік
+              </p>
+            </div>
+            <div class="advantages__card">
+              <img
+                class="advantages__card--img"
+                src="/img/svg/local_shipping_icon.svg"
+                alt=""
+              />
+              <p class="advantages__card--description">
+                Доставка в Україну займає від 30 до 60 днів з моменту покупки в
+                залежності від місцезнаходження авто
+              </p>
+            </div>
+            <div class="advantages__card">
+              <img
+                class="advantages__card--img"
+                src="/img/svg/soldiers_war.svg"
+                alt=""
+              />
+              <p class="advantages__card--description">Знижки для ЗСУ</p>
+              <p class="advantages__card--description">
+                Для учасників бойових дій, та для людей проходячих службу
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="experience">
+          <div class="experience-wrapper"></div>
+          <h2 class="experience-title"></h2>
+          <p class="experience-description"></p>
+          <img class="experience-img" src="" alt="" />
+        </section>
+
+        <section class="auctions">
+          <div class="container">
+            <h1 class="auctions__title">Де ми купуємо автівки</h1>
+            <div class="auctions__wrapper">
+              <div class="auctions__copart">
+                <a href="https://www.copart.com/">
+                  <img
+                    class="auctions__copart--img"
+                    src="/img/svg/CPRT_BIG.svg"
+                    alt="Copart"
+                /></a>
+              </div>
+              <div class="auctions__iaa">
+                <a href="https://www.iaai.com/"
+                  ><img
+                    class="auctions__iaa--img"
+                    src="/img/svg/IAA_BIG.svg"
+                    alt="Iaa"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="buycar">
+          <div class="container">
+            <h2 class="buycar__title">Процес покупки авто із США</h2>
+            <div class="buycar__wrapper">
+              <div class="buycar__card">
+                <h3 class="buycar__card--title">
+                  Пошук авто і розрахунок вартості
+                </h3>
+                <p class="buycar__card--discription">
+                  Підбираємо максимальну кількість найкращих варіантів авто під
+                  Ваш бюджет і вимоги
+                </p>
+              </div>
+              <div class="buycar__card">
+                <h3 class="buycar__card--title">Перевірка автомобіля</h3>
+                <p class="buycar__card--discription">
+                  Вивчаємо всю історію автомобіля і надаємо вам повний звіт по
+                  його станом
+                </p>
+              </div>
+              <div class="buycar__card">
+                <h3 class="buycar__card--title">Купівля автомобіля</h3>
+                <p class="buycar__card--discription">
+                  Тільки після повної перевірки і покупки нами автомобіля
+                  можливо здійснити платіж по invoice
+                </p>
+              </div>
+              <div class="buycar__card">
+                <h3 class="buycar__card--title">
+                  Розмитнення і оформлення авто
+                </h3>
+                <p class="buycar__card--discription">
+                  Після прибуття авто в Україні проводимо всі необхідні митні
+                  процедури
+                </p>
+              </div>
+              <div class="buycar__card">
+                <h3 class="buycar__card--title">Доставка авто в Україні</h3>
+                <p class="buycar__card--discription">
+                  Доставка в Україну займає від 15 до 60 днів з моменту покупки
+                  в залежності від місцезнаходження авто
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="buycar__overlay"></div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__wrapper--logo">MWCars</div>
+          <a href="https://instagram.com/mwcars.usa?igshid=OGQ5ZDc2ODk2ZA==">
+            <img
+              class="footer__wrapper--img"
+              src="/img/svg/app_instagram.svg"
+              alt="instagram"
+            />
+          </a>
+          <a href="">
+            <img
+              class="footer__wrapper--img"
+              src="/img/svg/telegram.svg"
+              alt="telegram"
+            />
+          </a>
+
+          <a href="">
+            <img
+              class="footer__wrapper--img"
+              src="/img/svg/vibericon.svg"
+              alt="viber"
+            />
+          </a>
+          <p>
+            Україна м.Кропивницький
+            <a href="tel:+380951709950">+380951709950</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/button.js"></script>
   </body>
 </html>

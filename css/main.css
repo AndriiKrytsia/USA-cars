@@ -1,0 +1,423 @@
+/* Reset and base styles  */
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&family=Inconsolata:wght@400;700;800&family=Inter:wght@400;700;800&family=Poppins:wght@400;700&family=Roboto:wght@300;700&family=Rubik+Scribble&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&family=Inconsolata:wght@400;700;800&family=Inter:wght@400;700;800&family=Poppins:wght@400;700&family=Roboto:wght@300;700&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button,
+input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 14px;
+  color: #fff;
+  background: rgb(37, 35, 35);
+  background: linear-gradient(0deg, rgb(37, 35, 35) 0%, rgb(37, 35, 35) 0%, rgb(9, 9, 9) 28%);
+}
+
+.container {
+  margin: 0 auto;
+  min-width: 280px;
+  max-width: 1260px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.header {
+  padding: 10px;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__logo {
+  font-family: "Pangolin", sans-serif;
+  font-size: 36px;
+}
+
+.header__logo--ukrain-svg {
+  margin-left: 20px;
+  width: 40px;
+  height: 40px;
+}
+
+.header__nav {
+  display: none;
+}
+
+@media screen and (min-width: 1260px) {
+  .header__nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  .header__nav--list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header__nav--link {
+    justify-content: space-between;
+    margin-left: 50px;
+    color: #fff;
+  }
+  .header__nav--tell-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+  .header__nav--tell-img {
+    margin-left: auto;
+    height: 20px;
+    width: 20px;
+    transition: transform 0.5s;
+  }
+  .header__nav--tell-img:hover {
+    transform: scale(1.5);
+  }
+}
+.header__nav--btn {
+  margin-left: auto;
+  padding-top: 10px;
+}
+
+.nav-icon-btn {
+  --time: 0.1s;
+  --width: 30px;
+  --height: 20px;
+  --line-height: 1px;
+  --line-margin: 2;
+  --color: #fff;
+  height: var(--height);
+  width: var(--width);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-icon {
+  position: relative;
+  width: var(--width);
+  height: var(--line-height);
+  background-color: var(--color);
+}
+
+.nav-icon::before,
+.nav-icon::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  width: var(--width);
+  height: var(--line-height);
+  background-color: var(--color);
+  transition: transform var(--time) ease-in, top var(--time) linear var(--time);
+}
+
+.nav-icon::before {
+  top: calc(var(--line-height) * -8);
+}
+
+.nav-icon::after {
+  top: calc(var(--line-height) * 8);
+}
+
+.nav-icon.nav-icon--active {
+  background-color: transparent;
+}
+
+.nav-icon.nav-icon--active::before,
+.nav-icon.nav-icon--active::after {
+  top: 0;
+  transition: top var(--time) linear, transform var(--time) ease-in var(--time);
+}
+
+.nav-icon.nav-icon--active::before {
+  transform: rotate(45deg);
+}
+
+.nav-icon.nav-icon--active::after {
+  transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 1260px) {
+  .header__nav--btn {
+    display: none;
+  }
+}
+.hero {
+  background: rgba(0, 0, 0, 0.8) url(/img/gif/97RC.gif) center/cover no-repeat;
+  height: 400px;
+  width: 100%;
+  position: relative;
+}
+
+.hero__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 0;
+}
+
+.hero-title {
+  position: relative;
+  padding-top: 250px;
+  font-size: 40px;
+  text-align: center;
+  z-index: 1;
+}
+
+.advantages {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.advantages__title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 50px;
+}
+
+.advantages__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 40px 30px;
+}
+@media screen and (min-width: 1260px) {
+  .advantages__wrapper {
+    display: flex;
+  }
+}
+
+.advantages__card {
+  max-width: 260px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 12px;
+}
+.advantages__card--img {
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 10px;
+  margin-bottom: 10px;
+  height: 50px;
+  width: 50px;
+  transition: transform 1s;
+  transition: box-shadow 0.5s, transform 0.5s;
+}
+.advantages__card--img:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 50px 20px rgba(255, 255, 255, 0.2);
+}
+
+.footer {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 24px;
+}
+.footer__wrapper--img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.5s;
+}
+.footer__wrapper--img:hover {
+  transform: scale(1.5);
+}
+.footer__wrapper--logo {
+  font-family: "Pangolin", sans-serif;
+  font-size: 36px;
+}
+
+.auctions {
+  padding-bottom: 70px;
+}
+
+.auctions__title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+.auctions__copart {
+  background: rgb(37, 35, 35);
+  background: linear-gradient(163deg, rgb(37, 35, 35) 0%, rgb(44, 26, 214) 0%, rgb(9, 9, 9) 100%);
+  height: 200px;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.auctions__copart--img {
+  padding-left: 20px;
+  width: 150px;
+  height: 150px;
+}
+
+.auctions__iaa {
+  background: rgb(37, 35, 35);
+  background: linear-gradient(164deg, rgb(37, 35, 35) 0%, rgb(1, 1, 1) 0%, rgb(255, 4, 4) 100%);
+  height: 200px;
+  width: 100%;
+  border-radius: 10px;
+}
+.auctions__iaa--img {
+  padding-left: 20px;
+  width: 150px;
+  height: 150px;
+}
+
+.buycar {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background: url(/img/img/usa-ukraine.jpg) center/cover no-repeat;
+  position: relative;
+}
+
+.buycar__title {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.buycar__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px 10px;
+}
+
+.buycar__card {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  border-radius: 10px;
+  margin: 0 auto;
+  max-width: 280px;
+}
+.buycar__card--title {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.buycar__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 0;
+}/*# sourceMappingURL=main.css.map */

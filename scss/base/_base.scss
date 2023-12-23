@@ -1,18 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&family=Inter:wght@400;700;800&family=Poppins:wght@400;700&family=Roboto:wght@300;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&family=Inconsolata:wght@400;700;800&family=Inter:wght@400;700;800&family=Poppins:wght@400;700&family=Roboto:wght@300;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&family=Inconsolata:wght@400;700;800&family=Inter:wght@400;700;800&family=Poppins:wght@400;700&family=Roboto:wght@300;700&family=Rubik+Scribble&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&family=Inconsolata:wght@400;700;800&family=Inter:wght@400;700;800&family=Poppins:wght@400;700&family=Roboto:wght@300;700&display=swap");
 
 body {
-    font-family: $font-main;
-    font-size: 16px;
-    color: $font-color;
-    background-color: $body-color;
+  font-family: $font-main;
+  font-size: 14px;
+  color: $font-color-white;
+  background: rgb(37, 35, 35);
+  background: linear-gradient(
+    0deg,
+    rgba(37, 35, 35, 1) 0%,
+    rgba(37, 35, 35, 1) 0%,
+    rgba(9, 9, 9, 1) 28%
+  );
 }
 
 .container {
-    margin: 0 auto;
-    min-width: 320px;
-    max-width: 1260px;
-    padding-left: 10px;
-    padding-right: 10px;
+  margin: 0 auto;
+  min-width: 280px;
+  max-width: 1260px;
+  padding-left: 5px;
+  padding-right: 5px;
 }

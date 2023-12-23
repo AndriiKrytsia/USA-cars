@@ -1,0 +1,144 @@
+.header {
+  padding: 10px;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__logo {
+  font-family: $font-element;
+  font-size: 36px;
+}
+
+.header__logo--ukrain-svg {
+  margin-left: 20px;
+  width: 40px;
+  height: 40px;
+}
+
+.header__nav {
+  display: none;
+}
+
+@include mediaDesktop {
+  .header__nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    &--list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &--link {
+      justify-content: space-between;
+      margin-left: 50px;
+      color: #fff;
+    }
+
+    // &--tell {
+    //   margin-left: ;
+    // }
+
+    &--tell-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+
+    &--tell-img {
+      margin-left: auto;
+      height: 20px;
+      width: 20px;
+      transition: transform 0.5s;
+    }
+
+    &--tell-img:hover {
+      transform: scale(1.5);
+    }
+  }
+}
+
+// BUTTON
+
+.header__nav--btn {
+  margin-left: auto;
+  padding-top: 10px;
+}
+
+.nav-icon-btn {
+  --time: 0.1s;
+  --width: 30px;
+  --height: 20px;
+  --line-height: 1px;
+  --line-margin: 2;
+  --color: #fff;
+
+  height: var(--height);
+  width: var(--width);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-icon {
+  position: relative;
+  width: var(--width);
+  height: var(--line-height);
+  background-color: var(--color);
+}
+
+.nav-icon::before,
+.nav-icon::after {
+  content: "";
+  display: block;
+
+  position: absolute;
+  left: 0;
+
+  width: var(--width);
+  height: var(--line-height);
+
+  background-color: var(--color);
+  transition: transform var(--time) ease-in, top var(--time) linear var(--time);
+}
+
+.nav-icon::before {
+  top: calc(var(--line-height) * -8);
+}
+
+.nav-icon::after {
+  top: calc(var(--line-height) * 8);
+}
+
+.nav-icon.nav-icon--active {
+  background-color: transparent;
+}
+
+.nav-icon.nav-icon--active::before,
+.nav-icon.nav-icon--active::after {
+  top: 0;
+  transition: top var(--time) linear, transform var(--time) ease-in var(--time);
+}
+
+.nav-icon.nav-icon--active::before {
+  transform: rotate(45deg);
+}
+
+.nav-icon.nav-icon--active::after {
+  transform: rotate(-45deg);
+}
+
+@include mediaDesktop {
+  .header__nav--btn {
+    display: none;
+  }
+}
+
+// //////////////
